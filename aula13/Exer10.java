@@ -1,7 +1,7 @@
 package com.valerio.cursojava.aula13;
 import java.text.DecimalFormat;
 import java.util.Scanner;
-public class exercicio10 {
+public class Exer10 {
 
 	public static void main(String[] args) {
 		

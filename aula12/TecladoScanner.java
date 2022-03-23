@@ -1,4 +1,4 @@
-package com.valerio.cursojava.aula12exercicio;
+package com.valerio.cursojava.aula12;
 
 import java.util.Scanner;
 public class TecladoScanner {

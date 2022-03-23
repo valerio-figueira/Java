@@ -1,6 +1,6 @@
 package com.valerio.cursojava.aula13;
 
-public class exercicio01 {
+public class Exer01 {
 
 	public static void main(String[] args) {
 

@@ -1,6 +1,6 @@
-package com.valerio.cursojava.aula10exercicio;
+package com.valerio.cursojava.aula10;
 
-public class exercitando {
+public class Exer {
 
 	public static void main(String[] args) {
 		

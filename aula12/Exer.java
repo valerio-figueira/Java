@@ -1,7 +1,7 @@
-package com.valerio.cursojava.aula12exercicio2;
+package com.valerio.cursojava.aula12;
 
 import java.util.Scanner;
-public class exercitando {
+public class Exer {
 
 	public static void main(String[] args) {
 		

@@ -1,6 +1,6 @@
 package com.valerio.cursojava.aula13;
 import java.util.Scanner;
-public class exer03 {
+public class Exer03 {
 
 	public static void main(String[] args) {
 		
