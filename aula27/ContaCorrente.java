@@ -3,14 +3,16 @@ package com.valerio.cursojava.aula27;
 import java.util.Scanner;
 
 public class ContaCorrente {
-	int conta, oid;
+	int conta;
+	double saque;
 	String nome;
 	double saldo, saldoEspecial;
 	boolean especial;
 
+	Scanner input = new Scanner(System.in);
+
 	double sacarDinheiro(double saldo) {
-		Scanner input = new Scanner(System.in);
-		double saque = 0;
+		saque = 0;
 		if (saldo > 0) {
 			do {
 				System.out.println(saldo + "R$ disponível para saque.");
@@ -20,17 +22,17 @@ public class ContaCorrente {
 					System.out.println("Saldo indisponível");
 				}
 			} while (saque > saldo);
+
 		} else {
 			System.out.println("Saldo indisponível.");
-			if (especial == true) {
+			if (especial) {
 				this.saldoEspecial = gastarEspecial(0);
 			}
 		}
-		return saldo - saque;
+		return saldo -= saque;
 	}
 
 	double depositarDinheiro(double dinheiro) {
-		Scanner input = new Scanner(System.in);
 		System.out.print("Digite o valor do depósito: ");
 		dinheiro = input.nextDouble();
 		return dinheiro + this.saldo;
@@ -46,23 +48,21 @@ public class ContaCorrente {
 		}
 	}
 
-	double gastarEspecial(double valor) {
-		Scanner input = new Scanner(System.in);
+	double gastarEspecial(double saque) {
 		if (saldoEspecial > 0) {
 			do {
 				System.out.println("Cheque Especial R$" + this.saldoEspecial);
 				System.out.println("Digite o valor do saque Especial: ");
-				valor = input.nextDouble();
-				if (valor > this.saldoEspecial) {
+				saque = input.nextDouble();
+				if (saque > this.saldoEspecial) {
 					System.out.println("Saldo indisponível");
 				}
-			} while (valor > this.saldoEspecial);
+			} while (saque > this.saldoEspecial);
 		}
-		return this.saldoEspecial - valor;
+		return this.saldoEspecial -= saque;
 	}
 
 	int home(int menu) {
-		Scanner input = new Scanner(System.in);
 		boolean sair = false;
 		while (!sair) {
 			System.out.println("::::::::: Banco Caixa Econômica :::::::::");

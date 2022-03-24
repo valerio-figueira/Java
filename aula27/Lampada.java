@@ -1,6 +1,9 @@
 package com.valerio.cursojava.aula27;
 
 public class Lampada {
+	boolean checkOption;
+	int ligada;
+	
 	boolean onOff(int num) {
 		if (num == 1) {
 			System.out.println("Ligado");

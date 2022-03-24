@@ -6,7 +6,6 @@ public class ExerContaCorrente {
 	public static void main(String[] args) {
 		ContaCorrente cc = new ContaCorrente();
 		boolean sair = false;
-		cc.oid = 1;
 		cc.conta = 1565;
 		cc.nome = "José Valério";
 		cc.especial = true;

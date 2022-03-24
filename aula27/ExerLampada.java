@@ -6,17 +6,17 @@ public class ExerLampada {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		Lampada lamp = new Lampada();
-		int num = 0;
-		boolean sair = false;
-		while (!sair) {
+		lamp.ligada = 0;
+		lamp.checkOption = false;
+		while (!lamp.checkOption) {
 			System.out.print("1 - ligar | 2 - desligar: ");
-			num = input.nextInt();
-			if (num != 1 && num != 2) {
+			lamp.ligada = input.nextInt();
+			if (lamp.ligada != 1 && lamp.ligada != 2) {
 				System.out.println("Erro!");
 			} else {
-				sair = true;
+				lamp.checkOption = true;
 			}
 		}
-		lamp.onOff(num);
+		lamp.onOff(lamp.ligada);
 	}
 }

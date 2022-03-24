@@ -11,5 +11,4 @@ public class Exer {
 		System.out.println("Seu CPF é: " + CPF);
 		
 	}
-
 }
