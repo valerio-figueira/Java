@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Exer04 {
 
+	private static Scanner input;
+
 	public static void main(String[] args) {
 		home();
 	}
@@ -57,7 +59,7 @@ public class Exer04 {
 	}
 
 	public static int home(int num) {
-		Scanner input = new Scanner(System.in);
+		input = new Scanner(System.in);
 		System.out.println(":::::: Agenda Home ::::::");
 		do {
 			System.out.println("1 - Agendar tarefa\n2 - Alterar agenda\n3 - Consultar agenda");
@@ -67,8 +69,7 @@ public class Exer04 {
 	}
 
 	public static int setDay(int num) {
-		Scanner input = new Scanner(System.in);
-		boolean sair = false;
+		input = new Scanner(System.in);
 		do {
 			System.out.print("Digite o dia do mês: ");
 			num = input.nextInt();
@@ -77,7 +78,7 @@ public class Exer04 {
 	}
 
 	public static int setHour(int num) {
-		Scanner input = new Scanner(System.in);
+		input = new Scanner(System.in);
 		do {
 			System.out.print("Digite a hora do dia: ");
 			num = input.nextInt();
@@ -86,7 +87,7 @@ public class Exer04 {
 	}
 
 	public static String setTask(String descricao) {
-		Scanner input = new Scanner(System.in);
+		input = new Scanner(System.in);
 		System.out.print("Digite a descrição da tarefa: ");
 		descricao = input.nextLine();
 		return descricao;

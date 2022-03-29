@@ -3,9 +3,9 @@ package com.valerio.cursojava.aula19v2;
 import java.util.Scanner;
 
 public class Exer24 {
+	private static Scanner key = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		Scanner key = new Scanner(System.in);
 		int a[] = new int[10];
 
 		for (int i = 0; i < a.length; i++) {

@@ -3,9 +3,10 @@ package com.valerio.cursojava.aula19;
 import java.util.Scanner;
 
 public class Exer11 {
+	static Scanner key = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		Scanner key = new Scanner(System.in);
+
 		int[] a = new int[5];
 		int par = 0;
 
@@ -14,7 +15,7 @@ public class Exer11 {
 			a[i] = key.nextInt();
 
 			if (a[i] % 2 == 0) {
-				par ++;
+				par++;
 				System.out.println("O " + (i + 1) + "º número é par: " + a[i] + "\n");
 			} else {
 				System.out.println("O " + (i + 1) + "º número é ímpar: " + a[i] + "\n");

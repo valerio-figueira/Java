@@ -1,10 +1,7 @@
 package com.valerio.cursojava.aula19v2;
 
-import java.util.Scanner;
-
 public class Exer19 {
 	public static void main(String[] args) {
-		Scanner key = new Scanner(System.in);
 		double nota1[] = new double[10];
 		double nota2[] = new double[10];
 		double result[] = new double[10];

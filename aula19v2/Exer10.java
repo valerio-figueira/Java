@@ -1,11 +1,8 @@
 package com.valerio.cursojava.aula19v2;
 
-import java.util.Scanner;
-
 public class Exer10 {
 
 	public static void main(String[] args) {
-		Scanner key = new Scanner(System.in);
 		int a[] = new int[10];
 		int b[] = new int[a.length];
 		System.out.print("Valor de A: ");

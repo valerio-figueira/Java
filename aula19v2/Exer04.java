@@ -1,11 +1,9 @@
 package com.valerio.cursojava.aula19v2;
 import java.text.DecimalFormat;
-import java.util.Scanner;
 
 public class Exer04 {
 
 	public static void main(String[] args) {
-		Scanner key = new Scanner(System.in);
 		DecimalFormat df = new DecimalFormat("0.##");
 		int a[] = new int[10];
 		double b[] = new double[a.length];

@@ -1,6 +1,7 @@
 package com.valerio.cursojava.aula20;
 import java.util.Scanner;
 public class Exer06v2 {
+	private static Scanner input = new Scanner(System.in);
 	public static void main(String[] args) {
 		String[][] a = new String[3][3];
 		home(a);
@@ -61,7 +62,6 @@ public class Exer06v2 {
 	}
 
 	public static String firstPlayer(String[][] a, int line, int column) {
-		Scanner input = new Scanner(System.in);
 		boolean sair = false;
 		System.out.println("::::::: 1st Player - X ::::::");
 		while (!sair) {
@@ -82,7 +82,6 @@ public class Exer06v2 {
 	}
 
 	public static String secondPlayer(String[][] a, int line, int column) {
-		Scanner input = new Scanner(System.in);
 		boolean sair = false;
 		System.out.println("::::::: 2nd Player - O :::::::");
 		while (!sair) {

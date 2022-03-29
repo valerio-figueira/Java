@@ -4,7 +4,6 @@ public class Exer23 {
 
 	public static void main(String[] args) {
 		int a[] = new int[10];
-		int par = 0;
 		boolean prosseguir = true;
 		for (int i = 0; i < a.length && prosseguir == true; i++) {
 			a[i] = (int) Math.round(Math.random() * 100);

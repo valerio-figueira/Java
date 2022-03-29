@@ -1,9 +1,9 @@
 package com.valerio.cursojava.aula20;
 
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exer05 {
+	private static Scanner input;
 
 	public static void main(String[] args) {
 		home();
@@ -42,8 +42,8 @@ public class Exer05 {
 		int day = setDay(0);
 		int hour = setHour(0);
 		schedule[day][hour] = setTask(schedule[day][hour]);
-		System.out.print("Agendado: " + schedule[day][hour] + " | Mês: " + month[twelveMonths] + " | Dia: " + day + " | Hora: "
-				+ hour + ":00h\n\n");
+		System.out.print("Agendado: " + schedule[day][hour] + " | Mês: " + month[twelveMonths] + " | Dia: " + day
+				+ " | Hora: " + hour + ":00h\n\n");
 	}
 
 	public static void editarAgenda(String[][] schedule) {
@@ -68,7 +68,7 @@ public class Exer05 {
 	}
 
 	public static int home(int num) {
-		Scanner input = new Scanner(System.in);
+		input = new Scanner(System.in);
 		System.out.println(":::::: Agenda Home ::::::");
 		do {
 			System.out.println("1 - Agendar tarefa\n2 - Alterar agenda\n3 - Consultar agenda");
@@ -78,7 +78,7 @@ public class Exer05 {
 	}
 
 	public static int setDay(int num) {
-		Scanner input = new Scanner(System.in);
+		input = new Scanner(System.in);
 		do {
 			System.out.print("Digite o dia do mês: ");
 			num = input.nextInt();
@@ -87,7 +87,7 @@ public class Exer05 {
 	}
 
 	public static int setHour(int num) {
-		Scanner input = new Scanner(System.in);
+		input = new Scanner(System.in);
 		do {
 			System.out.print("Digite a hora do dia(9:00/17:00): ");
 			num = input.nextInt();
@@ -96,14 +96,14 @@ public class Exer05 {
 	}
 
 	public static String setTask(String description) {
-		Scanner input = new Scanner(System.in);
+		input = new Scanner(System.in);
 		System.out.print("Digite a descrição da tarefa: ");
 		description = input.nextLine();
 		return description;
 	}
 
 	public static int getNumberMonth(int num) {
-		Scanner input = new Scanner(System.in);
+		input = new Scanner(System.in);
 		do {
 			System.out.print("Selecione o mês(1/12): ");
 			num = input.nextInt();

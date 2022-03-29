@@ -1,11 +1,8 @@
 package com.valerio.cursojava.aula19v2;
 
-import java.util.Scanner;
-
 public class Exer01 {
 
 	public static void main(String[] args) {
-		Scanner key = new Scanner(System.in);
 		int a[] = new int[5];
 		int b[] = new int[a.length];
 
@@ -17,8 +14,7 @@ public class Exer01 {
 		for (int i = 0; i < a.length; i++) {
 			if (i < a.length - 1) {
 				System.out.print(a[i] + ", ");
-			}
-			if (i == a.length - 1) {
+			} else {
 				System.out.println(a[i] + ".");
 			}
 		}
@@ -26,8 +22,7 @@ public class Exer01 {
 		for (int i = 0; i < b.length; i++) {
 			if (i < b.length - 1) {
 				System.out.print(b[i] + ", ");
-			}
-			if (i == b.length - 1) {
+			} else {
 				System.out.println(b[i] + ".");
 			}
 		}
