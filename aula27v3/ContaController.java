@@ -42,6 +42,10 @@ public class ContaController {
 		return c.deposito + c.saldo;
 	}
 
+	boolean checkEspecial(ContaCorrente c) {
+		return c.saldo < 0;
+	}
+
 	void consultarSaldo(ContaCorrente c) {
 		System.out.println("Saldo: " + c.saldo);
 		System.out.println("Limite Especial: " + c.limite);

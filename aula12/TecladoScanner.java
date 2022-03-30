@@ -1,12 +1,14 @@
 package com.valerio.cursojava.aula12;
 
 import java.util.Scanner;
+
 public class TecladoScanner {
+	static Scanner scan = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Digite seu primeiro nome, sua idade, quantidade de filhos, altura, se tem animal de estimação: ");
+
+		System.out.println(
+				"Digite seu primeiro nome, sua idade, quantidade de filhos, altura, se tem animal de estimação: ");
 		String primeiroNome = scan.next();
 		int idade = scan.nextInt();
 		byte qtdFilhos = scan.nextByte();
@@ -19,7 +21,7 @@ public class TecladoScanner {
 		System.out.println("Quantidade de filhos: " + qtdFilhos);
 		System.out.println("Altura: " + altura);
 		System.out.println("Animal de estimação: " + temPet);
-		
+
 	}
 
 }

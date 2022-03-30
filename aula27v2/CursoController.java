@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class CursoController {
 	Scanner input;
 	Random random;
+	static double media;
 
 	public CursoController(Scanner scanner, Random random) {
 		this.input = scanner;
@@ -13,7 +14,7 @@ public class CursoController {
 	}
 
 	String input(String text) {
-		System.out.println(text);
+		System.out.print(text);
 		return input.nextLine();
 	}
 
@@ -29,27 +30,46 @@ public class CursoController {
 		return vetorDisciplinas;
 	}
 
-	double[] atribuirNotas(double[] notas, String[] disciplinas) {
+	double[][] atribuirNotas(double[][] notas, String[] disciplinas) {
 		for (int i = 0; i < notas.length; i++) {
-			do {
-				System.out.print("Digite a " + (i + 1) + "ª nota (" + disciplinas[i] + "): ");
-				notas[i] = input.nextInt();
-				if (notas[i] < 0 || notas[i] > 10) {
-					System.out.println("Digite uma nota válida");
-				}
-			} while (notas[i] < 0 || notas[i] > 10);
+			for (int j = 0; j < notas[i].length; j++) {
+				do {
+					System.out.print("Digite a " + (j + 1) + "ª nota (" + disciplinas[i] + "): ");
+					notas[i][j] = input.nextInt();
+					if (notas[i][j] < 0 || notas[i][j] > 10) {
+						System.out.println("Digite uma nota válida");
+					}
+				} while (notas[i][j] < 0 || notas[i][j] > 10);
+			}
 		}
 		return notas;
 	}
 
-	String definirAprovacao(Curso curso) {
+	boolean verificarAprovacao(int indice, Curso curso) {
+		double soma = 0;
+		for (int i = 0; i < curso.notas[indice].length; i++) {
+			soma += curso.notas[indice][i];
+		}
+		media = soma / 4;
+		if (media >= 7) {
+			return true;
+		}
+		return false;
+	}
+
+	String showNotas(Curso curso) {
 		String status = "";
 		for (int i = 0; i < curso.notas.length; i++) {
-			if (curso.notas[i] >= 7) {
-				status += curso.disciplina[i] + ": " + curso.notas[i] + " - Aprovado\n";
-			} else {
-				status += curso.disciplina[i] + ": " + curso.notas[i] + " - Reprovado\n";
+			status += curso.disciplina[i] + ": ";
+			for (int j = 0; j < curso.notas[i].length; j++) {
+				status += curso.notas[i][j];
+				if (j == curso.notas[i].length - 1) {
+					status += ".\n";
+				} else {
+					status += " - ";
+				}
 			}
+			System.out.println();
 		}
 		return status;
 	}
@@ -67,6 +87,6 @@ public class CursoController {
 				status += ", ";
 			}
 		}
-		System.out.print(status + definirAprovacao(curso));
+		System.out.print(status + showNotas(curso));
 	}
 }

@@ -21,6 +21,11 @@ public class ExerContaCorrente {
 				cc.sacarSaldo(c);
 				System.out.println("Saldo: " + c.saldo);
 				System.out.println("Limite: " + c.limite);
+				if (cc.checkEspecial(c)) {
+					System.out.println("Está usando cheque especial.");
+				} else {
+					System.out.println("Não está usando cheque especial.");
+				}
 				break;
 			}
 			case 2: {

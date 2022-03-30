@@ -13,8 +13,16 @@ public class ExerCurso {
 		curso.matricula = c.generateRegistration();
 		curso.nome = c.input("Digite o nome do estudante: ");
 		curso.disciplina = c.cadastrarDisciplinas(new String[3]);
-		curso.notas = c.atribuirNotas(new double[3], curso.disciplina);
+		curso.notas = c.atribuirNotas(new double[3][4], curso.disciplina);
 
 		c.showForm(curso);
+
+		for (int i = 0; i < curso.disciplina.length; i++) {
+			if (c.verificarAprovacao(i, curso)) {
+				System.out.println(curso.disciplina[i] + " - Aprovado");
+			} else {
+				System.out.println(curso.disciplina[i] + " - Reprovado");
+			}
+		}
 	}
 }
