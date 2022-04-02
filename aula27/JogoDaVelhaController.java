@@ -1,15 +1,12 @@
 package com.valerio.cursojava.aula27;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class JogoDaVelhaController {
 	Scanner input;
-	Random random;
 
-	JogoDaVelhaController(Scanner scanner, Random random) {
+	JogoDaVelhaController(Scanner scanner) {
 		input = scanner;
-		this.random = random;
 	}
 
 	public int input(String text) {
@@ -32,13 +29,12 @@ public class JogoDaVelhaController {
 
 	char[][] rollPlay(char[][] a, JogoDaVelha jogo) {
 
-		while (!jogo.endGame) {
+		while (true) {
 			firstPlayer(jogo, 0, 0);
 			printTab(jogo.a);
 			jogo.empate++;
 			if (getWinner(jogo.a, 'X')) {
 				System.out.println("Fim de Jogo!\n1st Player é o vencedor");
-				jogo.endGame = true;
 				break;
 			}
 			secondPlayer(jogo);
@@ -46,13 +42,11 @@ public class JogoDaVelhaController {
 			jogo.empate++;
 			if (getWinner(jogo.a, 'O')) {
 				System.out.println("Fim de Jogo!\n2nd Player é o vencedor");
-				jogo.endGame = true;
 				break;
 			}
 			if (jogo.empate == 9) {
 				System.out.println("Empate!");
 				printTab(jogo.a);
-				jogo.endGame = true;
 				break;
 			}
 		}

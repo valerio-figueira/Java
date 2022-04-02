@@ -4,6 +4,5 @@ public class JogoDaVelha {
 	char[][] a;
 	int line, column;
 	int empate;
-	boolean endGame;
 	boolean checkGame;
 }
