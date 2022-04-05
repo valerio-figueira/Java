@@ -3,9 +3,10 @@ package com.valerio.cursojava.aula17;
 import java.util.Scanner;
 
 public class Exer05 {
+	static Scanner key = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		Scanner key = new Scanner(System.in);
+
 		double pA, pB;
 		double crescA, crescB;
 		int ano = 0;

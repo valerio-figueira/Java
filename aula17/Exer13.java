@@ -3,9 +3,9 @@ package com.valerio.cursojava.aula17;
 import java.util.Scanner;
 
 public class Exer13 {
+	static Scanner key = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		Scanner key = new Scanner(System.in);
 
 		double base, exp, i = 1, produto;
 
@@ -13,7 +13,7 @@ public class Exer13 {
 		base = key.nextDouble();
 		System.out.println("Digite o expoente deste número: ");
 		exp = key.nextDouble();
-		
+
 		for (produto = base; i < exp; i++) {
 			produto *= base;
 			System.out.println("O produto é " + produto);

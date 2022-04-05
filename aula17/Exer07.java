@@ -3,9 +3,10 @@ package com.valerio.cursojava.aula17;
 import java.util.Scanner;
 
 public class Exer07 {
+	static Scanner key = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		Scanner key = new Scanner(System.in);
+
 		int maior = Integer.MIN_VALUE;
 
 		for (int num = 0, i = 1; i <= 5; i++) {
