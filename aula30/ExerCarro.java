@@ -9,5 +9,7 @@ public class ExerCarro {
 		System.out.println(van.modelo);
 		System.out.println(van.numPassageiros);
 		System.out.println(van.ano);
+		
+		
 	}
 }
