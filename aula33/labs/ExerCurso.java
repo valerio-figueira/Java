@@ -6,15 +6,16 @@ public class ExerCurso {
 
 	public static void main(String[] args) {
 		Curso c = new Curso();
+		CursoController cc = new CursoController();
 
 		c.setScanner(new Scanner(System.in));
 		
-		c.setAluno(c.typeText("Digite o nome do aluno: "));
-		c.setTipo(c.typeText("Digite o curso: "));
-		c.setMatricula(c.definirMatricula());
+		c.setAluno(cc.typeText("Digite o nome do aluno: "));
+		c.setTipo(cc.typeText("Digite o curso: "));
+		c.setMatricula(cc.definirMatricula(c));
 		
-		c.definirDisciplinas();
-		c.atribuirNotas();
-		c.showForm();
+		cc.definirDisciplinas(c);
+		cc.atribuirNotas(c);
+		cc.showForm(c);
 	}
 }

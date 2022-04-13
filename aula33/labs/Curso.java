@@ -28,6 +28,10 @@ public class Curso {
 		this.disciplina = disciplina;
 	}
 
+	public void setDisciplina(int i, String typeNum) {
+		this.disciplina[i] = typeNum;
+	}
+
 	public String getTipo() {
 		return tipo;
 	}
@@ -52,6 +56,10 @@ public class Curso {
 		this.notas = notas;
 	}
 
+	public void setNotas(int i, int j, int typeNum) {
+		this.notas[i][j] = typeNum;
+	}
+
 	public int getMatricula() {
 		return matricula;
 	}
@@ -64,68 +72,8 @@ public class Curso {
 		return random;
 	}
 
-	public void setRandom(Random random) {
-		this.random = random;
+	public Object getNotas(int i) {
+		return notas[i];		
 	}
 
-	public String typeText(String text) {
-		System.out.print(text);
-		return scanner.nextLine();
-	}
-
-	public int typeNum(String text) {
-		System.out.print(text);
-		return scanner.nextInt();
-	}
-
-	public int definirMatricula() {
-		setRandom(new Random());
-		return random.nextInt(9999);
-	}
-
-	public String[] definirDisciplinas() {
-		setDisciplina(new String[3]);
-		for (int i = 0; i < disciplina.length; i++) {
-			disciplina[i] = typeText("Digite a " + (i + 1) + "ª disciplina: ");
-		}
-		return disciplina;
-	}
-
-	public double[][] atribuirNotas() {
-		setNotas(new double[3][4]);
-		for (int i = 0; i < notas.length; i++) {
-			for (int j = 0; j < notas[i].length; j++) {
-				notas[i][j] = typeNum("A " + (j + 1) + "ª nota (" + disciplina[i] + "): ");
-			}
-		}
-		return notas;
-	}
-
-	public boolean definirAprovacao(int position) {
-		double media = 0;
-		for (int i = 0; i < notas[position].length; i++) {
-			media += notas[position][i];
-			System.out.println("Notas: " + notas[position][i]);
-		}
-		media = media / notas[position].length;
-		if (media >= 7) {
-			System.out.println("Média: " + media);
-			return true;
-		} else {
-			System.out.println("Média: " + media);
-			return false;
-		}
-	}
-
-	public void showForm() {
-		System.out.println("Nome: " + aluno + " | Curso: " + tipo + " | Matrícula: " + matricula);
-		for (int i = 0; i < disciplina.length; i++) {
-			System.out.println(disciplina[i] + ": ");
-			if (definirAprovacao(i)) {
-				System.out.println("Aprovado\n");
-			} else {
-				System.out.println("Reprovado\n");
-			}
-		}
-	}
 }
