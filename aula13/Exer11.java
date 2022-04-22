@@ -2,11 +2,10 @@ package com.valerio.cursojava.aula13;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 public class Exer11 {
-
+	static Scanner key = new Scanner (System.in);
+	
 	public static void main(String[] args) {
-		
-		Scanner key = new Scanner (System.in);
-		
+				
 		System.out.println("a) O produto do dobro do primeiro com metade do segundo.\nDigite dois números Inteiros: ");
 		int numInt1 = key.nextInt();
 		int numInt2 = key.nextInt();

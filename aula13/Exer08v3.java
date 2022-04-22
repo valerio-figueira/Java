@@ -3,10 +3,9 @@ package com.valerio.cursojava.aula13;
 import java.util.Scanner;
 
 public class Exer08v3 {
-
-	public static void main(String[] args) {
-
-		Scanner key = new Scanner(System.in);
+	static Scanner key = new Scanner(System.in);
+	
+	public static void main(String[] args) {		
 
 		System.out.println("Digite o valor do Salário em horas R$ ");
 		double salarioHoras = key.nextDouble();

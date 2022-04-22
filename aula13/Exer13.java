@@ -1,11 +1,10 @@
 package com.valerio.cursojava.aula13;
 import java.util.Scanner;
 public class Exer13 {
-
+	static Scanner key = new Scanner(System.in);
+	
 	public static void main(String[] args) {
-		
-		Scanner key = new Scanner(System.in);
-		
+						
 		System.out.println("Quanto você ganha por hora: ");
 		double qtdHoras = key.nextDouble();
 		System.out.println("A quantidade de horas trabalhadas no mês: ");

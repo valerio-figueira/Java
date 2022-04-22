@@ -1,11 +1,10 @@
 package com.valerio.cursojava.aula13;
 import java.util.Scanner;
 public class Exer13v3 {
-
+	static Scanner key = new Scanner(System.in);
+	
 	public static void main(String[] args) {
-		
-		Scanner key = new Scanner(System.in);
-		
+				
 		double IR;
 		double INSS;
 		double Sindicato;

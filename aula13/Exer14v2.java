@@ -5,10 +5,10 @@ import java.text.DecimalFormat;
 
 public class Exer14v2 {
 
+	static Scanner key = new Scanner(System.in);
+	
 	public static void main(String[] args) {
-
-		Scanner key = new Scanner(System.in);
-
+		
 		double tempo;
 
 		System.out.println("Digite o tamanho do arquivo em MBytes: ");

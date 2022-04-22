@@ -4,10 +4,9 @@ import java.util.Scanner;
 import java.text.DecimalFormat;
 
 public class Exer14 {
+	static Scanner key = new Scanner(System.in);
 
 	public static void main(String[] args) {
-
-		Scanner key = new Scanner(System.in);
 
 		double MBtoMbps;
 		double seconds;
