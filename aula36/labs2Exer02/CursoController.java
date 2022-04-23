@@ -75,16 +75,13 @@ public class CursoController {
 	}
 
 	boolean definirAprovacao(Curso c, Aluno a) {
-		for (Aluno alist : c.getAluno()) {
-			if (a.getMedia() >= 7) {
-				printText(a.getNome() + " - Aprovado\n");
-				return true;
-			} else {
-				printText(a.getNome() + " - Reprovado\n");
-				return false;
-			}
+		if (a.getMedia() >= 7) {
+			printText(a.getNome() + " - Aprovado\n");
+			return true;
+		} else {
+			printText(a.getNome() + " - Reprovado\n");
+			return false;
 		}
-		return false;
 	}
 
 }

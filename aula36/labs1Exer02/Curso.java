@@ -1,4 +1,4 @@
-package com.valerio.cursojava.aula36.labsExer02;
+package com.valerio.cursojava.aula36.labs1Exer02;
 
 public class Curso {
 	private String nome;

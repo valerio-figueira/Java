@@ -1,4 +1,4 @@
-package com.valerio.cursojava.aula36.labsExer02;
+package com.valerio.cursojava.aula36.labs1Exer02;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -34,21 +34,15 @@ public class CursoController {
 		return p;
 	}
 
-	Curso definirAluno(Curso c, Aluno[] aluno) {
-		for (int i = 0; i < aluno.length; i++) {
-			Aluno a = new Aluno();
-			printText("O nome do " + (i + 1) + "º aluno: ");
-			a.setNome(scanner.next());
-			a.setMatricula(random.nextInt(9999));
-			a.setNotas(definirNotas(a));
-			a.setMedia(definirMedia(a));
-			aluno[i] = a;
-		}
-		c.setAluno(aluno);
-		return c;
-	}
+	/*
+	 * Curso definirAluno(Curso c, Aluno[] aluno) { for (int i = 0; i <
+	 * aluno.length; i++) { Aluno a = new Aluno(); printText("O nome do " + (i + 1)
+	 * + "º aluno: "); a.setNome(scanner.next());
+	 * a.setMatricula(random.nextInt(9999)); a.setNotas(definirNotas(a));
+	 * a.setMedia(definirMedia(a)); aluno[i] = a; } c.setAluno(aluno); return c; }
+	 */
 
-	Aluno definirAluno2(Curso c, Aluno a) {
+	Aluno definirAluno(Aluno a) {
 		printText("O nome do aluno: ");
 		a.setNome(scanner.next());
 		a.setMatricula(random.nextInt(9999));
@@ -58,7 +52,7 @@ public class CursoController {
 	}
 
 	double[] definirNotas(Aluno a) {
-		double[] notas = new double[a.getNotas().length];
+		double[] notas = a.getNotas();
 		for (int i = 0; i < a.getNotas().length; i++) {
 			printText("Digite a " + (i + 1) + "ª nota: ");
 			notas[i] = scanner.nextDouble();
@@ -75,15 +69,12 @@ public class CursoController {
 	}
 
 	boolean definirAprovacao(Curso c, Aluno a) {
-		for (Aluno alist : c.getAluno()) {
-			if (a.getMedia() >= 7) {
-				printText(a.getNome() + " - Aprovado\n");
-				return true;
-			} else {
-				printText(a.getNome() + " - Reprovado\n");
-				return false;
-			}
+		if (a.getMedia() >= 7) {
+			printText(a.getNome() + " - Aprovado(a)\n");
+			return true;
+		} else {
+			printText(a.getNome() + " - Reprovado(a)\n");
+			return false;
 		}
-		return false;
 	}
 }

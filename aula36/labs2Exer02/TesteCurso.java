@@ -16,10 +16,17 @@ public class TesteCurso {
 
 		c.setProfessor(p);
 
-		showContent(c.getInfo());
-		showContent(p.getInfo());
-
-		// showContent(a.getInfo());
-		// cc.definirAprovacao(c);
+		if (c.getInfo() != null) {
+			showContent(c.getInfo());
+		}
+		if (p.getInfo() != null) {
+			showContent(p.getInfo());
+		}
+		if (c.getAluno() != null) {
+			for (int i = 0; i < c.getAluno().length; i++) {
+				showContent(c.getAluno()[i].getInfo());
+				cc.definirAprovacao(c, c.getAluno()[i]);
+			}
+		}
 	}
 }
