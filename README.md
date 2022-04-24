@@ -1,3 +1,3 @@
-# Java-Basico-Exercicios
+# Java
 Meu progresso como estudante de Java
 
