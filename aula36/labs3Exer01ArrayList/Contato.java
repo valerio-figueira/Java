@@ -1,4 +1,4 @@
-package com.valerio.cursojava.aula36.labs3Exer01;
+package com.valerio.cursojava.aula36.labs3Exer01ArrayList;
 
 public class Contato {
 	private String nome;

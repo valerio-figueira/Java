@@ -11,17 +11,19 @@ public class TesteCurso {
 		Professor p = new Professor();
 		CursoController cc = new CursoController();
 		double media = 0;
-		
+
 		cc.definirCurso(c);
 		cc.definirProfessor(p);
 		c.setProfessor(p);
 
 		cc.definirAluno(c, new Aluno[2]);
-
-		for (int i = 0; i < c.getAluno().length; i++) {
-			printInfo(c.getAluno()[i].getInfo());
-			cc.definirMedia(c.getAluno()[i], media);
-			cc.definirAprovacao(c.getAluno()[i], media);
+		
+		if (c.getAluno() != null) {
+			for (int i = 0; i < c.getAluno().length; i++) {
+				printInfo(c.getAluno()[i].getInfo());
+				cc.definirMedia(c.getAluno()[i], media);
+				cc.definirAprovacao(c.getAluno()[i], media);
+			}
 		}
 
 		if (c.getInfo() != null && p.getInfo() != null) {

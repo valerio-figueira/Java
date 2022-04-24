@@ -18,8 +18,7 @@ public class AgendaController {
 		return scanner.nextLine();
 	}
 
-	Agenda cadastrarContato(Agenda a) {
-		Contato[] contato = new Contato[2];
+	Agenda cadastrarContato(Agenda a, Contato[] contato) {
 		for (int i = 0; i < contato.length; i++) {
 			Contato c = new Contato();
 			c.setNome(typeText("Digite o nome do contato: "));
@@ -29,12 +28,5 @@ public class AgendaController {
 		}
 		a.setContato(contato);
 		return a;
-	}
-
-	Contato definirInformacoes(Contato c) {
-		c.setNome(typeText("Digite o nome: "));
-		c.setEmail(typeText("Digite o e-mail: "));
-		c.setTelefone(typeText("Digite o telefone: "));
-		return c;
 	}
 }

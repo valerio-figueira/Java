@@ -10,7 +10,7 @@ public class TesteAgenda {
 		Agenda a = new Agenda();
 		AgendaController ac = new AgendaController();
 		
-		ac.cadastrarContato(a);
+		ac.cadastrarContato(a, new Contato[2]);
 
 		showText(a.getInfo());
 	}

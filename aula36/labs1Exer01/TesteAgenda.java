@@ -18,7 +18,9 @@ public class TesteAgenda {
 	public static void main(String[] args) {
 		Agenda a = new Agenda();
 		Contato[] contato = new Contato[2];
-
+		
+		a.setNome("Agenda 2022");
+		
 		for (int i = 0; i < contato.length; i++) {
 			Contato c = new Contato();
 			c.setNome(typeText("Digite o " + (i + 1) + "º nome: "));

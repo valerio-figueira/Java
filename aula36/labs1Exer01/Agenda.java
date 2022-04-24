@@ -23,7 +23,9 @@ public class Agenda {
 	public String getInfo() {
 		String info = "Nome da Agenda: " + nome + "\n";
 		for (Contato c : contato) {
-			info += c.getInfo();
+			if (c.getInfo() != null) {
+				info += c.getInfo();
+			}
 		}
 		return info;
 	}
