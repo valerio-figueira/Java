@@ -4,6 +4,10 @@ public class Professor extends Pessoa {
 	private double salario;
 	private String nmCurso;
 
+	Professor() {
+		super();
+	}
+
 	public double getSalario() {
 		return salario;
 	}

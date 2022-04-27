@@ -6,6 +6,10 @@ public class Aluno extends Pessoa {
 	private String curso;
 	private ArrayList<Double> notas;
 	
+	public Aluno() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	public String getCurso() {
 		return curso;
