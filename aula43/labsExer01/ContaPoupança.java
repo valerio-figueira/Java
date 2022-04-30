@@ -1,4 +1,4 @@
-package com.valerio.cursojava.aula43.labs;
+package com.valerio.cursojava.aula43.labsExer01;
 
 public class ContaPoupança extends ContaBancaria {
 	private double diaRendimento;
