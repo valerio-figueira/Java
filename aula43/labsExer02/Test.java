@@ -28,7 +28,7 @@ public class Test {
 		printDescription(pj1.toString());
 		
 		PessoaJuridica pj2 = new PessoaJuridica();
-		pj2.setNome("Cícero");
+		pj2.setNome("Juju");
 		pj2.setRendaBruta(4400);
 		printDescription(pj2.toString());
 		
