@@ -15,13 +15,13 @@ public class Test {
 		ce.setNome(c.setName());
 		ce.setConta(c.setAccount());
 		ce.setSaldo(120);
-		ce.setLimite(200);
+		ce.setLimite(10);
 
 		ce.sacarDinheiro(50);
 		ce.sacarDinheiro(80);
-		ce.depositarDinheiro(20);
+		ce.depositarDinheiro(0);
 
-		printDescription(ce.toString());
+		System.out.println(ce); // não é preciso chamar o toString
 
 		ContaPoupança cp = new ContaPoupança();
 		cp.setNome("Percival");

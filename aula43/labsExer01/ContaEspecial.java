@@ -24,19 +24,19 @@ public class ContaEspecial extends ContaBancaria {
 			super.setSaldo(super.getSaldo() - saque);
 			return true;
 		} else {
-			if (super.getSaldo() + this.limite >= saque) {				
+			if (super.getSaldo() + this.limite >= saque) {
 				this.limite = (getSaldo() + this.limite) - saque;
-				super.setSaldo(0);
+				super.setSaldo(getSaldo() - saque);
 				return true;
+			} else {
+				return false;
 			}
-			return false;
 		}
+
 	}
 
 	public String toString() {
-		String description = "\nNome: " + super.getNome();
-		description += "\nNúmero da Conta: " + super.getConta();
-		description += "\nSaldo: R$" + super.getSaldo();
+		String description = super.toString();
 		description += "\nLimite Especial: R$" + this.limite;
 		return description;
 	}

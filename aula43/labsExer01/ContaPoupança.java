@@ -1,32 +1,30 @@
 package com.valerio.cursojava.aula43.labsExer01;
 
 public class ContaPoupança extends ContaBancaria {
-	private double diaRendimento;
+	private double rendimento;
 
 	public double getSaldo() {
 		return super.getSaldo();
 	}
 
-	public double getDiaRendimento() {
-		return diaRendimento;
+	public double getRendimento() {
+		return rendimento;
 	}
 
-	public void setDiaRendimento(double diaRendimento) {
-		this.diaRendimento = diaRendimento;
+	public void setRendimento(double diaRendimento) {
+		this.rendimento = diaRendimento;
 	}
 
 	public double atualizarSaldo(double taxa) {
 		taxa = taxa / 100;
-		this.setDiaRendimento(super.getSaldo() * taxa);
-		super.setSaldo(super.getSaldo() + getDiaRendimento());
+		this.setRendimento(super.getSaldo() * taxa);
+		super.setSaldo(super.getSaldo() + getRendimento());
 		return super.getSaldo();
 	}
 
 	public String toString() {
-		String description = "\nNome: " + super.getNome();
-		description += "\nNúmero da Conta: " + super.getConta();
-		description += "\nSaldo: R$" + super.getSaldo();
-		description += "\nRendimento Diário: R$" + diaRendimento;
+		String description = super.toString();
+		description += "\nRendimento Diário: R$" + rendimento;
 		return description;
 	}
 }
