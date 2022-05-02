@@ -15,4 +15,10 @@ public abstract class Contribuinte {
 		this.nome = nome;
 	}
 
+	public abstract double calcularIR();
+
+	@Override
+	public String toString() {
+		return "\nNome: " + this.getNome() + " - Pessoa Física";
+	}
 }

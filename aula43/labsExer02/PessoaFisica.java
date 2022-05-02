@@ -35,7 +35,7 @@ public class PessoaFisica extends Contribuinte {
 
 	@Override
 	public String toString() {
-		String desc = "\nNome: " + super.getNome() + " - Pessoa Física";
+		String desc = super.toString();
 		desc += "\nRenda Bruta: R$" + this.proventos;
 		desc += "\nImposto a pagar: R$" + calcularIR() + " - " + this.percentual + "%";
 		return desc;

@@ -2,7 +2,7 @@ package com.valerio.cursojava.aula43.labsExer02;
 
 public class PessoaJuridica extends Contribuinte {
 	private double proventos;
-	private double percentual;
+	private final double percentual = 10;
 
 	public double getRendaBruta() {
 		return proventos;
@@ -13,14 +13,13 @@ public class PessoaJuridica extends Contribuinte {
 	}
 
 	public double calcularIR() {
-		this.percentual = 10;
 		double imposto = (proventos * percentual) / 100;
 		return imposto;
 	}
-	
+
 	@Override
 	public String toString() {
-		String desc = "\nNome: " + super.getNome() + " - Pessoa Jurídica";
+		String desc = super.toString();
 		desc += "\nRenda Bruta: R$" + this.proventos;
 		desc += "\nImposto a pagar: R$" + calcularIR() + " - " + this.percentual + "%";
 		return desc;
