@@ -2,6 +2,7 @@ package com.valerio.cursojava.aula43.labsExer03;
 
 public class Aquatico extends Animal {
 	private String ambiente;
+	private String caracteristica;
 
 	Aquatico() {
 		super();
@@ -15,13 +16,18 @@ public class Aquatico extends Animal {
 		this.ambiente = ambiente;
 	}
 
+	public String getCaracteristica() {
+		return caracteristica;
+	}
+
+	public void setCaracteristica(String caracteristica) {
+		this.caracteristica = caracteristica;
+	}
+
 	public String toString() {
-		String description = "\nNome: " + getNome();
-		description += "\nTipo: " + getTipo();
-		description += "\nCor: " + getCor();
-		description += "\nComprimento: " + getComprimento() + " cm";
-		description += "\nVelocidade: " + getVelocidade() + " m/s";
+		String description = super.toString();
 		description += "\nAmbiente: " + this.getAmbiente();
+		description += "\nCaracterística: " + this.getCaracteristica();
 		return description;
 	}
 }

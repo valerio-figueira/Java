@@ -50,4 +50,13 @@ public abstract class Animal {
 	public void setVelocidade(double velocidade) {
 		this.velocidade = velocidade;
 	}
+	
+	public String toString() {
+		String description = "\nAnimal: " + getNome();
+		description += "\nTipo: " + getTipo();
+		description += "\nCor: " + getCor();
+		description += "\nComprimento: " + getComprimento() + " cm";
+		description += "\nVelocidade: " + getVelocidade() + " m/s";
+		return description;
+	}
 }

@@ -16,11 +16,7 @@ public class Terrestre extends Animal {
 	}
 
 	public String toString() {
-		String description = "\nNome: " + getNome();
-		description += "\nTipo: " + getTipo();
-		description += "\nCor: " + getCor();
-		description += "\nComprimento: " + getComprimento() + " cm";
-		description += "\nVelocidade: " + getVelocidade() + " m/s";
+		String description = super.toString();
 		description += "\nAmbiente: " + this.getAmbiente();
 		return description;
 	}
