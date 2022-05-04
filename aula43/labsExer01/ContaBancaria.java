@@ -34,7 +34,8 @@ public class ContaBancaria {
 	}
 
 	public boolean sacarDinheiro(double saque) {
-		if (saldo >= saque) {
+		boolean validarSaque = saldo >= saque;
+		if (validarSaque) {
 			this.saldo -= saque;
 			return true;
 		} else {

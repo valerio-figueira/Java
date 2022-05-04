@@ -50,7 +50,7 @@ public abstract class Animal {
 	public void setVelocidade(double velocidade) {
 		this.velocidade = velocidade;
 	}
-	
+
 	public String toString() {
 		String description = "\nAnimal: " + getNome();
 		description += "\nTipo: " + getTipo();
