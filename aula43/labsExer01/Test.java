@@ -6,12 +6,12 @@ public class Test {
 		System.out.println(description);
 	}
 
-	public static void main(String[] args) {
-		ContaEspecial ce = new ContaEspecial();
+	public static void main(String[] args) {		
 		Controller c = new Controller();
 
 		// Audi, fili mi, verba sapientium et aenigmata eorum.
-
+		
+		ContaEspecial ce = new ContaEspecial();
 		ce.setNome(c.setName());
 		ce.setConta(c.setAccount());
 		ce.setSaldo(120);
