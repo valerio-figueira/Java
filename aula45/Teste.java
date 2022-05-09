@@ -35,5 +35,6 @@ public class Teste {
 		Pessoa a3 = (Pessoa) new Aluno(); // upcasting de conversão
 		
 		Aluno a4 = (Aluno) p1; // downcasting
+		
 	}
 }
