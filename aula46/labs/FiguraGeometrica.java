@@ -22,7 +22,7 @@ public class FiguraGeometrica {
 
 	@Override
 	public String toString() {
-		String s = "Nome: " + nome;
+		String s = "Tipo: " + nome;
 		return s;
 	}
 }

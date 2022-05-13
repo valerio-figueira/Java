@@ -2,38 +2,62 @@ package com.valerio.cursojava.aula46.labs;
 
 import java.util.ArrayList;
 
-import TypeInfoLibrary.TypeInfo;
-
 public class Test {
 
 	public static void main(String[] args) {
-		TypeInfo type = new TypeInfo();
+		ArrayList<FiguraGeometrica> figuras;
+		figuras = new ArrayList<FiguraGeometrica>();
 
-		Figura2D circulo = new Circulo();
-		Figura2D triangulo = new Triangulo();
-		Figura2D quadrado = new Quadrado();
+		Circulo circulo = new Circulo();
+		Triangulo triangulo = new Triangulo();
+		Quadrado quadrado = new Quadrado();
 
-		Figura3D esfera = new Esfera();
-		Figura3D piramide = new Piramide();
-		Figura3D cubo = new Cubo();
+		Esfera esfera = new Esfera();
+		Piramide piramide = new Piramide();
+		Cubo cubo = new Cubo();
 
 		circulo.setNome("Círculo");
-		triangulo.setNome("Triângulo");
-		quadrado.setNome("Quadrado");
-		esfera.setNome("Esfera");
-		piramide.setNome("Pirâmide");
-		cubo.setNome("Cubo");
+		circulo.setRaio(5);
 
-		ArrayList<FiguraGeometrica> figuras = new ArrayList<FiguraGeometrica>();
-		figuras.add(circulo);
+		triangulo.setNome("Triângulo");
+		triangulo.setBase(5);
+		triangulo.setAltura(15);
+
+		quadrado.setNome("Quadrado");
+		quadrado.setLado(5);
+
+		esfera.setNome("Esfera");
+		esfera.setRaio(8);
+
+		piramide.setNome("Pirâmide");
+		piramide.setAltura(0);
+		piramide.setApotemaBase(0);
+		piramide.setApotemaLateral(0);
+		piramide.setArestaBase(0);
+		piramide.setArestas(0);
+
+		cubo.setNome("Cubo");
+		cubo.setLado(6);
+
+		figuras.add(circulo); // upcasting
 		figuras.add(triangulo);
 		figuras.add(quadrado);
 		figuras.add(esfera);
 		figuras.add(piramide);
 		figuras.add(cubo);
 
-		for (FiguraGeometrica list : figuras) {
-			type.typeText(list.toString());
+		System.out.println("Figuras Geométricas:");
+		for (FiguraGeometrica fgeometrica : figuras) {
+			if (fgeometrica instanceof Figura2D) { // downcasting
+				Figura2D figura2D = (Figura2D) fgeometrica;
+				System.out.println(figura2D.toString());
+			}
+			System.out.println();
+			if(fgeometrica instanceof Figura3D) { //downcasting
+				Figura3D figura3d = (Figura3D) fgeometrica;
+				System.out.println(figura3d.toString());
+			}
 		}
+
 	}
 }
